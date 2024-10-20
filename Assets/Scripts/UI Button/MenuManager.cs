@@ -16,6 +16,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void StartScriptableObject()
+    {
+        SceneManager.LoadScene(3);
+    }
+
     public void ExitGame()
     {
         Application.Quit();
