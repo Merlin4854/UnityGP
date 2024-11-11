@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DamagePlayerOnContact : MonoBehaviour
 {
+    [SerializeField]
     public int damageAmount = 10; // Quantità di danno da infliggere
 
     // Metodo chiamato quando un altro oggetto entra in collisione con questo oggetto

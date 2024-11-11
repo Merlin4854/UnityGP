@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Input : MonoBehaviour
+public class Input2 : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _maxVelocity;

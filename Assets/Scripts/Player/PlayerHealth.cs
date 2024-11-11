@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100; // Salute massima del player
-    private int currentHealth;  // Salute attuale del player
+    public int currentHealth;  // Salute attuale del player
     public Slider healthSlider; // Riferimento allo Slider della salute
 
     // Metodo chiamato all'inizio del gioco
