@@ -47,7 +47,7 @@ namespace SaveLoad.Runtime
             {
                 SaveManager.Delete(PLAYER_PROFILE_NAME);
 
-                var playerSave = new PlayerSaveData { position = transform.position, health = currentHealth, damage = damageAmount };
+                var playerSave = new PlayerSaveData { position = transform.position, health = playerHealth.currentHealth, damage = attackPlayerOnContact.damageAmount};
 
                 var saveProfile = new SaveProfile<PlayerSaveData>(PLAYER_PROFILE_NAME, playerSave);
 
