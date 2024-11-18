@@ -31,7 +31,7 @@ namespace SaveLoad.Runtime
         private void Update ()
         {
             //load save profile
-            if (Input.GetKeyDown(KeyCode.E)) 
+            if (Input.GetKeyDown(KeyCode.R)) 
             {
                 var playerLoadedData = SaveManager.Load<PlayerSaveData>(PLAYER_PROFILE_NAME).saveData;
                 var pos = playerLoadedData.position;
@@ -43,7 +43,7 @@ namespace SaveLoad.Runtime
             }
 
             //Overwrithe save
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 SaveManager.Delete(PLAYER_PROFILE_NAME);
 

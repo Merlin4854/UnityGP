@@ -15,6 +15,7 @@ namespace SaveLoad.Runtime
             if(!File.Exists(saveFolder + "/" + profileName))
             {
                 Debug.LogError("Profile not found: " + profileName);
+                return;
             }
 
             Debug.Log("Deleting profile: " + profileName);
@@ -23,9 +24,10 @@ namespace SaveLoad.Runtime
 
         public static SaveProfile<T> Load<T>(string profileName) where T : SaveProfileData
         {
-            if(File.Exists(saveFolder + "/" + profileName))
+            if(!File.Exists(saveFolder + "/" + profileName))
             {
-                throw new FileNotFoundException("Profile not found: " + profileName);
+                Debug.LogError("Profile not found: " + profileName);
+                return null;
             }
 
             var fileContents = File.ReadAllText(saveFolder + "/" + profileName);
@@ -37,7 +39,8 @@ namespace SaveLoad.Runtime
         {
             if(File.Exists(saveFolder + "/" + saveProfile.name))
             {
-                throw new FileNotFoundException("Profile alrady exist: " + saveProfile.name);
+                Debug.LogError("Profile alrady exist: " + saveProfile.name);
+                return;
             }
 
             var serializedData = JsonConvert.SerializeObject(saveProfile, Formatting.Indented,
